@@ -1,7 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { splitByLine, splitByWord } from "utils/text";
-import { Word } from "Word";
-import { IWordProps } from "Word";
 import { Line, ILineProps } from "Line";
 
 interface ITextAssemblerProps
@@ -12,12 +10,12 @@ interface ITextAssemblerProps
 
 /**
  * Assembles text content by aggregating words in separate containers.
- * You can pass a custom Word renderer to handle the rendering for each word.
+ * You can pass a custom Line or Word renderer to handle the rendering for each word or line.
  * @param props
  * @returns React.ReactElement
  */
 export function TextAssembler(props: ITextAssemblerProps) {
-	const { text, ...lineProps } = props;
+	const { text, lineComponent, ...lineProps } = props;
 	const mappedLines = React.useMemo(() => {
 		const lines = splitByLine(text).map((line) => {
 			const words = splitByWord(line);
@@ -25,10 +23,11 @@ export function TextAssembler(props: ITextAssemblerProps) {
 		});
 		return lines;
 	}, [text]);
+	const LineComponent = lineComponent ?? Line;
 	return (
 		<>
 			{mappedLines.map((line, index) => (
-				<Line
+				<LineComponent
 					line={line}
 					key={`rta-line-${index}`}
 					isFinal={index === mappedLines.length - 1}
