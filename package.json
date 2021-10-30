@@ -1,34 +1,62 @@
 {
-  "name": "react-text-assembler",
-  "version": "1.0.0",
-  "description": "React tooling for rendering text in segregated word containers like rapgenius.",
-  "main": "src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "keywords": [
-    "rapgenius",
-    "assembler",
-    "words",
-    "separator",
-    "render"
-  ],
-  "author": "UltimateForm",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
-    "@storybook/addons": "^6.3.12",
-    "@storybook/react": "^6.3.12",
-    "@storybook/theming": "^6.3.12",
-    "@types/react": "^17.0.32",
-    "babel-loader": "^8.2.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "typescript": "^4.4.4"
-  }
+	"name": "react-text-assembler",
+	"version": "1.0.0",
+	"description": "React tooling for rendering text in segregated word containers like rapgenius.",
+	"main": "src/index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook",
+		"xo": "xo",
+		"xo:fix": "xo --fix"
+	},
+	"keywords": [
+		"rapgenius",
+		"assembler",
+		"words",
+		"separator",
+		"render"
+	],
+	"author": "UltimateForm",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.15.8",
+		"@storybook/addon-actions": "^6.3.12",
+		"@storybook/addon-essentials": "^6.3.12",
+		"@storybook/addon-links": "^6.3.12",
+		"@storybook/addons": "^6.3.12",
+		"@storybook/react": "^6.3.12",
+		"@storybook/theming": "^6.3.12",
+		"@types/react": "^17.0.32",
+		"babel-loader": "^8.2.3",
+		"eslint-config-xo-react": "^0.25.0",
+		"eslint-plugin-react": "^7.26.1",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"prettier": "^2.4.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"typescript": "^4.4.4",
+		"xo": "^0.46.3"
+	},
+	"xo": {
+		"extends": "xo-react",
+		"prettier": true,
+		"rules": {
+			"react/function-component-definition": "off",
+			"node/prefer-global/process": "off",
+			"unicorn/filename-case": "off",
+			"@typescript-eslint/naming-convention": "off",
+			"@typescript-eslint/no-unsafe-assignment": "off",
+			"@typescript-eslint/no-unsafe-call": "off",
+			"react/no-array-index-key": "warn",
+			"@typescript-eslint/no-implicit-any-catch": "warn",
+			"prefer-promise-reject-errors": "warn",
+			"prefer-regex-literals": "warn"
+		},
+		"ignore": [
+			"postcss.config.js",
+			"tailwind.config.js",
+			"next-env.d.ts"
+		]
+	}
 }

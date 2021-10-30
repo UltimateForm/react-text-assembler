@@ -1,3 +1,4 @@
+import React, { Fragment } from "react";
 import { IWordProps, Word } from "Word";
 
 export interface ILineProps
@@ -16,14 +17,10 @@ export function Line(props: ILineProps) {
 		<>
 			<span>
 				{line.map((word, w_index) => (
-					<>
-						<WordComponent
-							key={`word-${w_index}`}
-							word={word}
-							onWordClick={onWordClick}
-						/>
+					<Fragment key={`word-${w_index}`}>
+						<WordComponent word={word} onWordClick={onWordClick} />
 						{w_index !== line.length && <> </>}
-					</>
+					</Fragment>
 				))}
 			</span>
 			{!isFinal && <br />}

@@ -28,8 +28,8 @@ export function TextAssembler(props: ITextAssemblerProps) {
 		<>
 			{mappedLines.map((line, index) => (
 				<LineComponent
-					line={line}
 					key={`rta-line-${index}`}
+					line={line}
 					isFinal={index === mappedLines.length - 1}
 					{...lineProps}
 				/>

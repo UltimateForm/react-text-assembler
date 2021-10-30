@@ -1,2 +1,2 @@
-export { Word } from "./Word"
-export type { IWordProps } from "./Word"
+export { Word } from "./Word";
+export type { IWordProps } from "./Word";

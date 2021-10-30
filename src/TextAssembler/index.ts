@@ -1,1 +1,1 @@
-export {TextAssembler} from "./TextAssembler";
+export { TextAssembler } from "./TextAssembler";
