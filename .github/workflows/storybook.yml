@@ -3,7 +3,7 @@ on:
     paths: ["src/stories/**", "src/components/**"]
 
 
-name: Publish stories if changed
+name: Storybook Deploy
 
 jobs:
   build-and-deploy:
