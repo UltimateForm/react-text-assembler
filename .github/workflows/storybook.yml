@@ -1,5 +1,3 @@
-// .github/workflows/storybook.yml
-
 on: 
   push:
     paths: ["src/stories/**", "src/components/**"]
