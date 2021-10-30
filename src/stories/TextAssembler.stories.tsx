@@ -1,8 +1,8 @@
-import { TextAssembler } from "TextAssembler";
+import { TextAssembler } from "../TextAssembler";
 import React, { Fragment } from "react";
 import { ComponentStory } from "@storybook/react";
-import { IWordProps, Word } from "Word/Word";
-import { ILineProps } from "Line";
+import { IWordProps, Word } from "../Word/Word";
+import { ILineProps } from "../Line";
 
 const config = {
 	component: TextAssembler,

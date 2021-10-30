@@ -3,7 +3,7 @@ import { splitByLine, splitByWord } from "utils/text";
 import { Line, ILineProps } from "Line";
 
 interface ITextAssemblerProps
-	extends Pick<ILineProps, "wordComponent" | "onWordClick"> {
+	extends Partial<Pick<ILineProps, "wordComponent" | "onWordClick">> {
 	text: string;
 	lineComponent?: (props: ILineProps) => React.ReactElement;
 }
