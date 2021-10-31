@@ -14,7 +14,8 @@
 		"build-storybook": "build-storybook",
 		"xo": "xo",
 		"xo:fix": "xo --fix",
-		"build": "rollup -c"
+		"build": "rollup -c",
+		"prepublishOnly": "yarn build"
 	},
 	"keywords": [
 		"rapgenius",
