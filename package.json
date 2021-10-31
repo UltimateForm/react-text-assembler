@@ -2,7 +2,11 @@
 	"name": "react-text-assembler",
 	"version": "1.0.0",
 	"description": "React tooling for rendering text in segregated word containers like rapgenius.",
-	"main": "src/index.ts",
+	"main": "build/index.js",
+	"module": "build/index.esm.js",
+	"files": [
+		"build"
+	],
 	"scripts": {
 		"test": "jest",
 		"test:watch": "jest --watch",
