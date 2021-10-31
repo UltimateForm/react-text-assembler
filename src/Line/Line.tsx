@@ -23,7 +23,7 @@ export function Line(props: ILineProps) {
 					</Fragment>
 				))}
 			</span>
-			{!isFinal && <br />}
+			{!isFinal && <br aria-label="line-break" />}
 		</>
 	);
 }

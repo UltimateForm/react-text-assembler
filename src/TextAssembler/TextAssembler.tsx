@@ -1,6 +1,6 @@
 import React from "react";
-import { splitByLine, splitByWord } from "utils/text";
 import { Line, ILineProps } from "Line";
+import { mapLines } from "./mapLines";
 
 interface ITextAssemblerProps
 	extends Partial<Pick<ILineProps, "wordComponent" | "onWordClick">> {
@@ -17,11 +17,7 @@ interface ITextAssemblerProps
 export function TextAssembler(props: ITextAssemblerProps) {
 	const { text, lineComponent, ...lineProps } = props;
 	const mappedLines = React.useMemo(() => {
-		const lines = splitByLine(text).map((line) => {
-			const words = splitByWord(line);
-			return words;
-		});
-		return lines;
+		return mapLines(text);
 	}, [text]);
 	const LineComponent = lineComponent ?? Line;
 	return (

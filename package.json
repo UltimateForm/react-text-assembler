@@ -4,7 +4,8 @@
 	"description": "React tooling for rendering text in segregated word containers like rapgenius.",
 	"main": "src/index.ts",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest",
+		"test:watch": "jest --watch",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"xo": "xo",
@@ -30,17 +31,24 @@
 		"@storybook/addons": "^6.3.12",
 		"@storybook/react": "^6.3.12",
 		"@storybook/theming": "^6.3.12",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^12.1.2",
+		"@types/jest": "^27.0.2",
 		"@types/react": "^17.0.32",
 		"babel-loader": "^8.2.3",
 		"eslint-config-xo-react": "^0.25.0",
 		"eslint-plugin-react": "^7.26.1",
 		"eslint-plugin-react-hooks": "^4.2.0",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^27.3.1",
+		"jsdom": "^18.0.0",
 		"prettier": "^2.4.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"rollup": "^2.58.3",
 		"rollup-plugin-peer-deps-external": "^2.2.4",
 		"rollup-plugin-typescript2": "^0.30.0",
+		"ts-jest": "^27.0.7",
 		"typescript": "^4.4.4",
 		"xo": "^0.46.3"
 	},
@@ -64,12 +72,11 @@
 			"prefer-regex-literals": "warn"
 		},
 		"ignore": [
-			"postcss.config.js",
-			"tailwind.config.js",
-			"next-env.d.ts",
 			"rollup.config.js",
 			"src/**/*.stories.tsx",
-			"src/**/*.test.tsx"
+			"src/**/*.test.tsx",
+			"jest.config.js",
+			"jest.setup.ts"
 		]
 	}
 }
