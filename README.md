@@ -4,7 +4,7 @@
 
 React tooling for rendering text in segregated word containers like rapgenius.
 
-See [Storybook](https://ultimateform.github.io/react-text-assembler/) for examples.
+See [Storybook](https://ultimateform.github.io/react-text-assembler/) for docs and more examples.
 
 Usage:
 
