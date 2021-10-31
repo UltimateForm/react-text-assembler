@@ -6,6 +6,18 @@ React tooling for rendering text in segregated word containers like rapgenius.
 
 See [Storybook](https://ultimateform.github.io/react-text-assembler/) for examples.
 
+Usage:
+
+```tsx
+import { TextAssembler } from "react-text-assembler";
+
+function App() {
+	const text =
+		"They say I pretend or lie\r\nAll I write. No such thing.\r\nIt simply is that I\r\nFeel by imagining.\r\nI don't use the heart-string.\r\n\r\nAll that I dream or lose,\r\nThat falls short or dies on me,\r\nIs like a terrace which looks\r\nOn another thing beyond.\r\nIt's that thing leads me on.\r\n\r\nAnd so I write in the middle\r\nOf things not next one's feet,\r\nFree from my own muddle,\r\nConcerned for what is not.\r\nFeel? Let the reader feel!";
+	return <TextAssembler text={text} />;
+}
+```
+
 You can use your own custom Word and/or Line renderers but this library also exposes the default implementations in case you want to add up to them instead doing a completely custom approach.
 
 ```tsx
