@@ -1,6 +1,6 @@
 {
 	"name": "react-text-assembler",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "React tooling for rendering text in segregated word containers like rapgenius.",
 	"homepage": "https://ultimateform.github.io/react-text-assembler/",
 	"repository": {
