@@ -1,8 +1,8 @@
 import React from "react";
-import { Line, ILineProps } from "Line";
+import { Line, ILineProps } from "../Line";
 import { mapLines } from "./mapLines";
 
-interface ITextAssemblerProps
+export interface ITextAssemblerProps
 	extends Partial<Pick<ILineProps, "wordComponent" | "onWordClick">> {
 	text: string;
 	lineComponent?: (props: ILineProps) => React.ReactElement;

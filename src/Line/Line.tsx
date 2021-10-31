@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { IWordProps, Word } from "Word";
+import { IWordProps, Word } from "../Word";
 
 export interface ILineProps
 	extends React.DOMAttributes<HTMLSpanElement>,
