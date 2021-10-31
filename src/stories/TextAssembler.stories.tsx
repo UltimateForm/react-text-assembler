@@ -36,7 +36,7 @@ export function HandleWordClick() {
 			text={text}
 			onWordClick={(word: string) => {
 				// eslint-disable-next-line no-alert
-				window.alert("Clicked:" + word);
+				window.alert("Clicked word:" + word);
 			}}
 		/>
 	);
