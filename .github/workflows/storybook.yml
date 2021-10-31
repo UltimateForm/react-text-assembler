@@ -1,7 +1,7 @@
-on: 
+on:
   push:
-    paths: ["src/stories/**", "src/components/**"]
-
+    paths:
+      ["src/stories/**", "src/Line/**", "src/Word/**", "src/TextAssembler/**"]
 
 name: Storybook Deploy
 
@@ -9,13 +9,15 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-
-    - name: Build and deploy to storybook-static branch
-      uses: JamesIves/github-pages-deploy-action@2.0.3
-      uses: borales/actions-yarn@v2.3.0
-      env:
-        BRANCH: storybook-static
-        FOLDER: storybook-static
-        BUILD_SCRIPT: yarn install && yarn build-storybook
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build
+        uses: borales/actions-yarn@v2.3.0
+        run: |
+          yarn 
+          yarn build-storybook
+      - name: Deploy to storybook-static branch
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: storybook-static
+          folder: storybook-static
