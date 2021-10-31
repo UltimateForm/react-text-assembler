@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@master
       - uses: borales/actions-yarn@v2.3.0
       - name: Build storybook
-        run: yarn build-storybook
+        run: sudo yarn build-storybook
       - name: Deploy to storybook-static branch
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
