@@ -24,6 +24,6 @@ function MyCustomLineComponent(props:ILineProps){
 }
 ...
 function App() {
-	return <TextAssembler wordComponent={Word} lineComponent={Line}/>
+	return <TextAssembler wordComponent={MyCustomWordComponent} lineComponent={MyCustomLineComponent}/>
 }
 ```
